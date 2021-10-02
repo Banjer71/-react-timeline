@@ -1,9 +1,10 @@
-import './App.css';
+import "./App.css";
+import EventContainer from "./components/eventContainer";
 
 function App() {
   return (
     <div className="App">
-      <h1>React Timeline</h1>
+      <EventContainer />
     </div>
   );
 }
