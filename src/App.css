@@ -3,7 +3,7 @@ body {
 }
 
 .timeline {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   padding:  0px 10px;
   position: relative;
 }
@@ -32,6 +32,7 @@ body {
 .timeline-item {
   width: 100%;
   margin-bottom: 70px;
+  padding-top: 10px;
 }
 .timeline-img {
   width: 20px;
