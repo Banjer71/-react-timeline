@@ -4,7 +4,7 @@ body {
 
 .timeline {
   /* margin-top: 50px; */
-  padding:  0px 10px;
+  padding: 0px 10px;
   position: relative;
 }
 
@@ -19,7 +19,7 @@ body {
 }
 
 .timeline::after {
-  content: '';
+  content: "";
   display: flex;
   clear: both;
 }
@@ -62,7 +62,6 @@ body {
   width: auto;
   margin-left: 50px;
   /* margin-right: 45px; */
-    
 }
 
 .event-time {
@@ -99,6 +98,15 @@ body {
     width: 40%;
     margin-right: 45px;
     margin-top: 21px;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .timeline-item:nth-child(odd) .event-text {
+    margin-right: auto;
   }
 
   .timeline-item {
