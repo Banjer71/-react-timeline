@@ -1,0 +1,128 @@
+body {
+  background-color: #eae6e5;
+}
+
+.timeline {
+  padding: 50px 10px;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  background: #c5cae9;
+  width: 5px;
+  height: 95%;
+  position: absolute;
+  left: 30px;
+  transform: translateX(-50%);
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.timeline-item {
+  width: 100%;
+  margin-bottom: 70px;
+}
+.timeline-img {
+  width: 20px;
+  height: 20px;
+  background: #01baef;
+  border-radius: 50%;
+  position: absolute;
+  left: 30px;
+  margin-top: 25px;
+  margin-left: -10px;
+  transform: rotate(45deg);
+}
+
+.timeline-content {
+  position: relative;
+  width: 45%;
+  height: 130px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  background: #f5f5f5;
+  box-shadow: 0 20px 25px -15px rgb(0 0 0 / 30%);
+  display: flex;
+}
+
+.timeline .timeline-content {
+  max-width: 100%;
+  width: auto;
+  margin-left: 50px;
+}
+
+.event-time {
+  background-color: #f9b9f2;
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.event-text {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-title {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.event-description {
+  overflow: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .timeline::before {
+    left: 50%;
+  }
+
+  .timeline .timeline-content {
+    max-width: 100%;
+    width: 40%;
+    margin-right: 45px;
+  }
+
+  .timeline-item {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    position: relative;
+  }
+
+  .timeline-item:nth-child(odd) {
+    align-self: flex-end;
+    justify-content: flex-start;
+    padding-left: 30px;
+    padding-right: 0;
+  }
+
+  .timeline-img {
+    left: 50%;
+  }
+
+  .timeline-content {
+    position: relative;
+    width: 45%;
+    padding: 10px 30px;
+    border-radius: 4px;
+    background: #f5f5f5;
+    box-shadow: 0 20px 25px -15px rgb(0 0 0 / 30%);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .timeline {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
