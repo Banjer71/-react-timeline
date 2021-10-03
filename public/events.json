@@ -2,7 +2,7 @@
   {
     "time": "09:30",
     "title": "most immediately",
-    "description": "Pre-interview meeting, discuss about candidate experience and the role he applied"
+    "description": "Pre-screenin candidate interview"
   },
   {
     "time": "10:00",
@@ -12,7 +12,7 @@
   {
     "time": "11:15",
     "title": "immediately",
-    "description": "Second interview step meeting, pairing with the candidate and commenting the task he made"
+    "description": "Second interview step meeting, pairing with the candidate"
   },
   {
     "time": "11.30",
@@ -27,7 +27,7 @@
   {
     "time": "12.30",
     "title": "priority level 1",
-    "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,"
+    "description": "Contrary to popular belief, Lorem Ipsum is not simply random text."
   },
   {
     "time": "14.30",
@@ -52,7 +52,7 @@
   {
     "time": "16.30",
     "title": "priority level 1",
-    "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,"
+    "description": "Contrary to popular belief, Lorem Ipsum is not simply random text."
   },
   {
     "time": "16.45",
