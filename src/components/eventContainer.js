@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Event from "./event";
 
 const EventContainer = () => {
   const [eventData, setEventData] = useState([]);
-  const [count, setCount] = useState(0);
+
+  const count = useRef(0);
 
   useEffect(() => {
     const addNewElementToArr = async () => {
@@ -12,10 +13,12 @@ const EventContainer = () => {
 
       if (eventData.length < events.length) {
         const temp = eventData.slice();
-        temp.unshift(events[count]);
+        temp.unshift(events[count.current]);
+        count.current =
+          count.current === events.length - 1
+            ? (count.current = 0)
+            : count.current + 1;
         setEventData(temp);
-
-        setCount(count === events.length - 1 ? 0 : count + 1);
       }
     };
 
@@ -28,7 +31,7 @@ const EventContainer = () => {
     };
 
     deleteEvent();
-    const timer = setInterval(addNewElementToArr, 5000);
+    const timer = setInterval(addNewElementToArr, 2000);
     return () => clearInterval(timer);
   });
 
