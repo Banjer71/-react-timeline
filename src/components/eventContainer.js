@@ -31,7 +31,7 @@ const EventContainer = () => {
     };
 
     deleteEvent();
-    const timer = setInterval(addNewElementToArr, 2000);
+    const timer = setInterval(addNewElementToArr, 5000);
     return () => clearInterval(timer);
   });
 
