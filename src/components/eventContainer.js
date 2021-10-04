@@ -3,7 +3,6 @@ import Event from "./event";
 
 const EventContainer = () => {
   const [eventData, setEventData] = useState([]);
-
   const count = useRef(0);
 
   useEffect(() => {
