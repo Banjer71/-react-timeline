@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import Event from "./event";
+import Modal from './modal';
 
 const EventContainer = () => {
   const [eventData, setEventData] = useState([]);
-
+ 
   const count = useRef(0);
 
   useEffect(() => {
@@ -33,14 +34,22 @@ const EventContainer = () => {
     deleteEvent();
     const timer = setInterval(addNewElementToArr, 2000);
     return () => clearInterval(timer);
-  });
+  }, [eventData]);
 
+  
+
+  const [eventShown, setEventShown ] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
+
+  
   return (
     <div className="timeline">
       {eventData &&
         eventData.map((event, id) => {
-          return <Event event={event} key={id} />;
+          return <Event event={event} key={id} onClick={() => {setEventShown(event); setIsOpen(true)}}/>;
         })}
+        {eventShown && isOpen && <Modal event={eventShown} closeModal={setIsOpen}/> }
+        {/* {isOpen && <Modal closeModal={setIsOpen}  event={eventShown}/>} */}
     </div>
   );
 };
